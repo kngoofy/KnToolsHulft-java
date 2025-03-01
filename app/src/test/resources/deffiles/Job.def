@@ -1,0 +1,43 @@
+#
+# ID=HEADER
+#
+JOB=HEADER
+JOB DEF
+ JOBHEADER01 command line A copy file to dest
+DEFEND
+COMMENT=HEADER comment
+END
+#
+# ID=JOB01
+#
+JOB=JOB01
+JOB DEF
+ JOB01 command line 1 copy file to dest
+ JOB01 command line 2 rename dest to other
+ JOB01 command line 3 rename dest to other
+ JOB01 command line 4 rename dest to other
+ JOB01 command line 5 rename dest to other
+DEFEND
+COMMENT=JOB01 comment
+END
+#
+# ID=JOB02
+#
+JOB=JOB02
+JOB DEF
+ JOB02 command line N1 mv "${FILENM}" "${FILENM}_${EDATE2}${ETIME}"
+ JOB02 command line N2 opes...
+ JOB02 command line N3 grep ASCII text.file
+DEFEND
+COMMENT=
+END
+#
+# ID=JOB03
+#
+JOB=JOB03
+JOB DEF
+ JOB03 command line N1 mv "${FILENM}" "${FILENM}_${EDATE2}${ETIME}"
+ JOB02 command line N3 grep ASCII text.file
+DEFEND
+COMMENT=
+END

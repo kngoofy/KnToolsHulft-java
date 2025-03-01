@@ -1,0 +1,69 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "MainDriver",
+            "request": "launch",
+            "mainClass": "org.westclan.kntools.hulft.MainDriver",
+            "projectName": "app",
+            "vmArgs": [
+                "-XX:+UseG1GC",
+                "-Xms4096M",
+                "-Xmx8192M",
+                "-XX:MetaspaceSize=512m",
+                "-XX:MaxMetaspaceSize=1024m",
+                //   "-Xlog:gc*:file=target\\gc.log:tags,time,uptime",
+                "-Dlog4j2.loggerContextFactory=org.apache.logging.log4j.simple.SimpleLoggerContextFactory"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "FromFileMain",
+            "request": "launch",
+            "mainClass": "org.westclan.kntools.hulft.util.FromFileMain",
+            "projectName": "app",
+            "args": [
+                "app\\src\\main\\resources\\Template-KnToolsExcelHulft.xlsx",
+                "target\\fromFileKnToolsHulft.xlsx",
+                "app\\src\\test\\resources\\deffiles\\snd.def",
+                "app\\src\\test\\resources\\deffiles\\Rcv.def",
+                "app\\src\\test\\resources\\deffiles\\TGrp.def",
+                "app\\src\\test\\resources\\deffiles\\Hst.def",
+                "app\\src\\test\\resources\\deffiles\\Job.def"
+            ],
+            "vmArgs": [
+                "-XX:+UseG1GC",
+                "-Xms4096M",
+                "-Xmx8192M",
+                "-XX:MetaspaceSize=512m",
+                "-XX:MaxMetaspaceSize=1024m",
+                //   "-Xlog:gc*:file=target\\gc.log:tags,time,uptime",
+                "-Dlog4j2.loggerContextFactory=org.apache.logging.log4j.simple.SimpleLoggerContextFactory"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "TestDriver",
+            "request": "launch",
+            "mainClass": "org.westclan.kntools.hulft.TestDriver",
+            "projectName": "app"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "kntoolshulft.App",
+            "projectName": "app"
+        },
+    ]
+}
