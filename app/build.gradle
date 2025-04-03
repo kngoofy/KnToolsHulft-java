@@ -57,7 +57,7 @@ tasks.named('test') {
 }
 
 tasks.named('shadowJar', com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar) {
-  archiveBaseName = 'kntoolshulft-all.jar'
+  archiveBaseName = 'kntoolshulft-all'
   archiveClassifier = ''
   archiveVersion = ''
 }
