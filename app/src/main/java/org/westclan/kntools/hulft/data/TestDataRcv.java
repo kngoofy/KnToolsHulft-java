@@ -43,7 +43,7 @@ public class TestDataRcv {
             ABNORMAL=D
             RCVTYPE=S
             JOBID=
-            COMMENT=
+            COMMENT=JOHO=xxxxxx
             GRPID=
             EJOBID=
             GENCTL=N

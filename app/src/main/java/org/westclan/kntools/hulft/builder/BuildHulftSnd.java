@@ -31,6 +31,7 @@ public class BuildHulftSnd {
         String key = "";
         String value = "";
         String arrayKey[] = {};
+        String arrayKey2[] = {};
         HashMap<String, String> hashMap = new HashMap<>();
         ArrayList<RDefHulftSnd> arrayList = new ArrayList<RDefHulftSnd>();
 
@@ -78,8 +79,11 @@ public class BuildHulftSnd {
                     key = arrayKey[0];
                     if (arrayKey.length == 2) {
                         value = arrayKey[1];
-                    } else {
+                    } else if (arrayKey.length == 1) {
                         value = "-"; // valueが省略されている場合 ハイフンで埋め
+                    } else {
+                        arrayKey2 = line.split("=", 2);
+                        value = arrayKey2[1];
                     }
 
                     // ハッシュに追加

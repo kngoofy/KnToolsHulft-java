@@ -48,7 +48,7 @@ public class TestDataSnd {
             BLOCKCNT=0
             COMP=N
             JOBID=JOB01
-            COMMENT=
+            COMMENT=JOHO=XXXXXX
             GRPID=VM-TEST02
             FMTID=
             EJOBID=JOB01
